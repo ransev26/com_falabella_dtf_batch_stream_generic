@@ -1,0 +1,16 @@
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/RequestException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/ports/IQueue.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/QueueException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/App.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/util/DurationUtils.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/models/ServiceRequest.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/ports/IParser.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/ports/IDataProcesing.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/DataProcesingException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/adapters/PubsubQueue.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/EventException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/adapters/RequestParser.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/ParserException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/exceptions/EncoderException.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/util/WindowedFilenamePolicy.java
+/Users/rjvidal/falabella/datalake/dataflow/com_falabella_dtf_batch_stream_generic/src/main/java/cl/falabella/fund/service/Options.java
