@@ -40,9 +40,8 @@ gcloud pubsub topics create $TOPIC2
 
 gcloud pubsub subscriptions create --topic $TOPIC1 $SUBS1 
 
-gcloud pubsub subscriptions create --topic $NombreTopico2 $SUBS2
+gcloud pubsub subscriptions create --topic $TOPIC2 $SUBS2
 
-gcloud pubsub subscriptions create --topic $NombreTopico2 $SUBS2
 
 gcloud pubsub topics publish projects/$PROJECT/topics/$TOPIC1 \
   --message={"sku":"10432","price":"990"}
