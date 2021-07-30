@@ -28,11 +28,12 @@ public class App {
 
     public static final Schema SCHEMA = Schema.builder()
             .addStringField("sku")
-            .addStringField("transaction_time")
-            .addInt32Field("price")
+            .addDoubleField("price")
             .build();
 
-
+    public static final Schema RESULT_SCHEMA = Schema.builder()
+            .addDoubleField("metric")
+            .build();
 
     public static class RowToString extends DoFn<Row, String> {
         @ProcessElement
@@ -46,7 +47,7 @@ public class App {
     }
 
 
-        /**
+    /**
      * Main entry point for executing the pipeline.
      * @param args  The command-line arguments to the pipeline.
      */
@@ -93,16 +94,16 @@ public class App {
                 LOG.info("actualPrice[0]"+actualPrice[0]);
 
                 Row appRow = Row.withSchema(SCHEMA)
-                        .addValues(jo.get("sku").toString(),jo.get("transaction_time").toString(),Integer.valueOf(jo.get("price").toString()))
+                        .addValues(jo.get("sku").toString(),Double.valueOf(jo.get("price").toString()))
                         .build();
                 c.output(appRow);
                 //}
             }
         })).setRowSchema(SCHEMA);
 
-        String query = "SELECT (AVG(price)) FROM PCOLLECTION GROUP BY SESSION(CURRENT_TIMESTAMP, INTERVAL '10' SECOND)";
+        String query = "SELECT (MAX(price) / AVG(price)) FROM PCOLLECTION GROUP BY SESSION(CURRENT_TIMESTAMP, INTERVAL '10' SECOND)";
 
-        PCollection<Row> calculateMetric = addMemoryData.apply("Calculate Average per Time", SqlTransform.query(query));
+        PCollection<Row> calculateMetric = addMemoryData.apply("Calculate Metric Window Time", SqlTransform.query(query)).setRowSchema(RESULT_SCHEMA);
 
         PCollection<String> messageToPubsub = calculateMetric.apply("Transform Row in String", ParDo.of(new RowToString()));
 
