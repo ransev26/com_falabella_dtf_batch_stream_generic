@@ -65,7 +65,8 @@ mvn compile exec:java -Dexec.mainClass=cl.falabella.fund.App -Dexec.cleanupDaemo
 --gcsFilePath=gs://$BUCKET_NAME \
 --outputTopic=projects/$PROJECT/topics/$TOPIC2 \
 --dataFlowName=nerdear-la-falabella \
---workerMachineType=n1-standard-2"
+--workerMachineType=n1-standard-2 \
+--region=us-central1"
 ```
 
 ### See Results
