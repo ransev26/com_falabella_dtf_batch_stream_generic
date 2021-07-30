@@ -1,0 +1,2 @@
+# com_falabella_dtf_batch_stream_generic
+Continuous Agreggation Workshop Nerdearla-Falabella
